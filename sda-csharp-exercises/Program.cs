@@ -10,6 +10,7 @@ namespace sda_csharp_exercises
                 Console.WriteLine("Podaj liczbę:");
                 int _number = Convert.ToInt32(Console.ReadLine());
 
+
                 int _price = 5;
 
                 for (int i = 0; i < _number; i++)
