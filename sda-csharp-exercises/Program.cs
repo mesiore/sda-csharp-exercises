@@ -4,25 +4,36 @@ namespace sda_csharp_exercises
 {
     class Program
     {
-        static void Arithmetic(int length, int number, int difference )
+        static public void Triangle(int lines)
         {
-            int value = number;
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < lines; i++)
             {
-                Console.Write($"{ value}, ");
-                value = value + difference;
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("*");
+
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = lines - 1; i > 0; i--)
+            {
+                for (int j = i; j > 0; j--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
             }
         }
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Podaj pierwszą liczbę ciągu arytmetycznego:");
-            int number = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Podaj długość ciągu arytmetycznego:");
-            int length = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Podaj różnicę:");
-            int difference = Convert.ToInt32(Console.ReadLine());
 
-            Arithmetic(length, number, difference);
+        static void Main(string[] args)
+
+        {
+            Console.WriteLine("Ile chcesz mieć linii?");
+            int lines = Convert.ToInt32(Console.ReadLine());
+
+            Triangle(lines);
         }
+
     }
 }
