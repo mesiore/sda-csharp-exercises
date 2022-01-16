@@ -4,35 +4,25 @@ namespace sda_csharp_exercises
 {
     class Program
     {
-        static int PowerOf(int power, int number )
+        static void Arithmetic(int length, int number, int difference )
         {
             int value = number;
-            for (int i = 1; i < power; i++)
+            for (int i = 0; i < length; i++)
             {
-                value = value * number;
+                Console.Write($"{ value}, ");
+                value = value + difference;
             }
-
-            return value;
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Podstawa:");
-            int thisNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Potega:");
-            int thisPower = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj pierwszą liczbę ciągu arytmetycznego:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj długość ciągu arytmetycznego:");
+            int length = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj różnicę:");
+            int difference = Convert.ToInt32(Console.ReadLine());
 
-            if (thisPower < 0)
-            {
-                Console.WriteLine("Wykładnik nie może być ujenmy!");
-            }
-            else if (thisNumber == 0)
-            {
-                Console.WriteLine($"Wynik to: 1");
-            }
-            else
-            {
-                Console.WriteLine($"Wynik to: {PowerOf(thisNumber, thisPower)}");
-            }
+            Arithmetic(length, number, difference);
         }
     }
 }
