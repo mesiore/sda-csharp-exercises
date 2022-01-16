@@ -6,7 +6,7 @@ namespace sda_csharp_exercises
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("asdads");
+            Console.WriteLine("Witaj E00: -)!");
         }
     }
 }
