@@ -24,7 +24,7 @@ namespace sda_csharp_exercises
 
         static public string DecodeFromLeet(string input)
         {
-            char[] leetLetters = { '4', '3', '1', '0', '$', '7' };
+            char[] leetLetters = { '4', '3', '1', '0', '5', '7' };
             char[] naturalLetters = { 'a', 'e', 'l', 'o', 's', 't' };
 
             input = input.ToLower();
@@ -49,9 +49,16 @@ namespace sda_csharp_exercises
 
             string input2 = Console.ReadLine();
 
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("*********");
             Console.WriteLine($"Normalny tekst: \t\"{input1}\" \t");
+            Console.WriteLine();
             Console.WriteLine($"to L33t: \t\"{CodeToLeet(input1)}\"");
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine($"L33t tekst: \t\"{input2}\" \t");
+            Console.WriteLine();
             Console.WriteLine($"to normal: \t\"{DecodeFromLeet(input2)}\"");
 
         }
